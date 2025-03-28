@@ -18,7 +18,8 @@ This project is a comprehensive financial analysis of Netflix Inc., conducted as
 
 - **Data Sources:** Netflix's 10-K financial reports, Yahoo Finance, S&P 500 index data
 - **Methods Applied:**
-  - Capital Asset Pricing Model (CAPM)
+  - Capital Asset Pricing Model (CAPM) to estimate required return and cost of equity
+  - Gordon Growth Model (GGM) to estimate intrinsic valuation using calculated cost of equity and forward dividend estimates
   - Beta and Unlevered Beta Estimation
   - Ratio Analysis (Liquidity, Efficiency, Return, Solvency)
   - DuPont Decomposition
@@ -28,40 +29,27 @@ This project is a comprehensive financial analysis of Netflix Inc., conducted as
 
 ---
 
-## Key Highlights
+## Valuation Insights
 
-- **Beta Calculation:**  
-  Estimated beta of **1.288** using 5 years of monthly returns vs. S&P 500  
-  Implies Netflix stock moves slightly more than the market on average
+| Model | Assumptions | Estimated Price |
+|-------|-------------|-----------------|
+| CAPM  | Risk-free rate: 2.8%, Market return: 10%, Beta: 0.92 | 10.56% required return |
+| GGM   | Dividend per share: $2.05, Growth: 3% | $29.29 fair value |
 
-- **Cost of Equity:**  
-  Derived using CAPM with a market risk premium of 4.75% →  
-  **Cost of Equity = 9.81%**
-
-- **Unlevered Beta:**  
-  Adjusted for capital structure → **1.021**, indicating lower systematic risk without debt
-
-- **Capital Structure:**  
-  Netflix’s debt-to-asset ratio dropped from **71.8% in 2020** to **57.2% in 2022**, signaling a strategic shift toward a more equity-financed structure
-
-- **EPS Growth:**  
-  Basic EPS nearly **doubled** from $6.26 (2020) to $10.10 (2022), showing strong value creation
+- CAPM showed declining beta, indicating reduced volatility.
+- GGM indicated that Netflix was undervalued at the time of the analysis.
 
 ---
 
-## Ratio Summary (2022)
+## Key Ratios and Trends (2020–2022)
 
-| Metric                     | Value        |
-|---------------------------|--------------|
-| ROA                       | 10.84%       |
-| ROE                       | 24.53%       |
-| Debt-to-Equity Ratio      | 1.34         |
-| Current Ratio             | 1.17         |
-| Quick Ratio               | 0.89         |
-| Inventory Turnover        | 53.5         |
-| Times Interest Earned     | 8.45         |
-| Cash Interest Coverage    | 5.04         |
-| Cash Conversion Cycle     | 3.82 days    |
+| Metric                 | 2020   | 2021   | 2022   |
+|------------------------|--------|--------|--------|
+| Return on Assets (ROA) | 4.3%   | 6.7%   | 10.8%  |
+| Return on Equity (ROE) | 17.5%  | 22.3%  | 24.5%  |
+| EPS ($)                | 6.26   | 8.19   | 10.10  |
+| Debt-to-Equity Ratio   | 2.54   | 1.85   | 1.34   |
+| Beta (5Y Monthly)      | 1.28   | 1.12   | 0.92   |
 
 ---
 
@@ -70,6 +58,16 @@ This project is a comprehensive financial analysis of Netflix Inc., conducted as
 - **Leverage Comparison** with Disney, Warner Bros, Amazon, and Apple shows that Netflix has a moderate leverage ratio (**29.5%**) — slightly below the industry average
 - **Credit Ratings:** S&P: BBB / Moody’s: Ba1 (with positive outlook)
 - **Default Risk:** Despite rising competition, strong earnings and liquidity reduce near-term risk
+
+---
+
+## Key Findings
+
+- Netflix’s **ROA and ROE improved year over year**, showing increasing operational efficiency and return on equity investment.
+- **Earnings per share (EPS)** showed strong growth from $6.26 in 2020 to $10.10 in 2022.
+- The **Debt-to-Equity ratio decreased** from 2.54 to 1.34, reflecting improved capital structure and lower financial risk.
+- **Netflix's valuation** using GGM suggested that the stock might be undervalued, despite market headwinds in 2022.
+- **Beta declined**, implying a shift in stock risk profile to be closer to the market average.
 
 ---
 
@@ -83,17 +81,17 @@ This project is a comprehensive financial analysis of Netflix Inc., conducted as
 
 ## What I Learned
 
-- How to triangulate financial health through ratio trends, cash flows, and capital structure
-- Applied regression and decomposition techniques to real market and company data
-- Understood the interplay between market conditions, leverage, and investment risk
+- Applying real-world valuation models like CAPM and GGM enhances interpretation of financial risk and investor return expectations.
+- Financial trend analysis offers powerful insights into business performance beyond single-period analysis.
+- Financial statements and ratio interpretation are foundational for understanding business strategy and investor outcomes.
 
 ---
 
 ## What I Plan to Improve
 
-- Automate beta and CAPM analysis using Python or R
-- Visualize key ratio trends over time
-- Add dynamic dashboards (e.g., Power BI, Tableau) for comparative industry views
+- Expand the analysis with discounted cash flow (DCF) modeling to complement dividend-based valuation.
+- Add scenario analysis based on different macroeconomic or strategic growth assumptions.
+- Include peer benchmarking (e.g., Disney+, Amazon Prime) to contextualize Netflix’s performance.
 
 ---
 
